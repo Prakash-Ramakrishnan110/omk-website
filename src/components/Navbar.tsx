@@ -62,15 +62,13 @@ const Navbar = () => {
             onClick={() => setLanguage('EN')}
             className={`rounded-full py-1 px-2 md:py-1.5 md:px-3 font-black text-xs md:text-sm transition-colors ${language === 'EN' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
           >
-            <span className="md:hidden">EN</span>
-            <span className="hidden md:inline">English</span>
+            English
           </button>
           <button 
             onClick={() => setLanguage('TA')}
             className={`rounded-full py-1 px-2 md:py-1.5 md:px-3 font-black text-xs md:text-sm transition-colors tamil ${language === 'TA' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
           >
-            <span className="md:hidden">TA</span>
-            <span className="hidden md:inline">தமிழ்</span>
+            தமிழ்
           </button>
         </div>
 
