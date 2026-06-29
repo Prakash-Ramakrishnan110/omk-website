@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #b40000;
+  --color-primary-dark: #850000;
+  --color-primary-light: #fff4f4;
+  --color-omk-text: #151515;
+  --color-omk-muted: #626262;
+  --color-omk-line: #eadada;
+  --color-omk-card: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-omk-text);
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.shadow-custom {
+  box-shadow: 0 12px 34px rgba(120,0,0,0.09);
+}
+
+.radius-custom {
+  border-radius: 18px;
+}
+
+/* --- Hero Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes mapPulse {
+  0%, 100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 40px rgba(252, 201, 23, 0.8)) drop-shadow(0 0 80px rgba(252, 201, 23, 0.4)) brightness(1.5) sepia(1) hue-rotate(10deg) saturate(3);
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 60px rgba(252, 201, 23, 1)) drop-shadow(0 0 100px rgba(252, 201, 23, 0.6)) brightness(1.7) sepia(1) hue-rotate(10deg) saturate(3);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-map-pulse {
+  animation: mapPulse 8s ease-in-out infinite;
+}
+
+.leader-entrance {
+  animation: slideInRight 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.leader-float {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
