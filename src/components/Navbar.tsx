@@ -35,15 +35,15 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-b from-primary to-primary-dark text-white shadow-[0_4px_18px_rgba(0,0,0,0.14)]">
-      <div className="container mx-auto w-[min(1480px,96%)] h-[66px] flex items-center gap-[18px]">
+      <div className="container mx-auto w-[min(1480px,96%)] h-[66px] flex items-center gap-1 md:gap-[18px]">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0">
-          <div className="w-[36px] h-[36px] md:w-[46px] md:h-[46px] shrink-0 rounded-full bg-white border-[2px] md:border-[3px] border-white/45 flex items-center justify-center shadow-[inset_0_0_0_2px_#b40000] overflow-hidden">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink min-w-0">
+          <div className="w-[32px] h-[32px] md:w-[46px] md:h-[46px] shrink-0 rounded-full bg-white border-[2px] md:border-[3px] border-white/45 flex items-center justify-center shadow-[inset_0_0_0_2px_#b40000] overflow-hidden">
             <img src="/omk-logo.webp" alt="OMK logo" className="w-full h-full object-cover" />
           </div>
-          <span className="flex flex-col leading-[1.02]">
-            <strong className="text-[14px] md:text-[19px] font-black tracking-[-0.2px] whitespace-nowrap">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
-            <small className="font-black tracking-[1px] md:tracking-[2.5px] opacity-98 text-center mt-1 text-[9px] md:text-[11px] w-full block">— OMK —</small>
+          <span className="flex flex-col shrink min-w-0">
+            <strong className="text-[11px] sm:text-[14px] md:text-[19px] leading-tight font-black tracking-[-0.2px] whitespace-normal md:whitespace-nowrap break-words">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
+            <small className="font-black tracking-[1px] md:tracking-[2.5px] opacity-98 text-center mt-0.5 md:mt-1 text-[8px] md:text-[11px] w-full block">— OMK —</small>
           </span>
         </Link>
 
