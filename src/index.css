@@ -24,6 +24,25 @@
   }
 }
 
+.id-card-zoom {
+  zoom: 0.85;
+}
+@media (max-width: 768px) {
+  .id-card-zoom {
+    zoom: 0.6;
+  }
+}
+@media (max-width: 500px) {
+  .id-card-zoom {
+    zoom: 0.38;
+  }
+}
+@media (max-width: 380px) {
+  .id-card-zoom {
+    zoom: 0.34;
+  }
+}
+
 .shadow-custom {
   box-shadow: 0 12px 34px rgba(120,0,0,0.09);
 }

@@ -80,7 +80,7 @@ const IDCardTemplate: React.FC<IDCardTemplateProps> = ({ member, settings }) => 
         .tamil { font-family: 'Noto Sans Tamil', sans-serif; }
       `}</style>
       
-      <div className="flex justify-center w-full overflow-hidden pb-4" style={{ zoom: 0.85, fontFamily: "'Inter', 'Noto Sans Tamil', sans-serif" }}>
+      <div className="flex justify-center w-full overflow-hidden pb-4 id-card-zoom" style={{ fontFamily: "'Inter', 'Noto Sans Tamil', sans-serif" }}>
         <div ref={cardRef} className="w-[800px] h-[450px] bg-[#fcc917] rounded-xl border-[6px] border-white shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative overflow-hidden box-border">
           
           <div className="absolute inset-0 z-0 opacity-[0.08]" style={{ backgroundImage: "url('/omk_crowd_bg.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
