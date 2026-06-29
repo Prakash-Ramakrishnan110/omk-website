@@ -11,7 +11,7 @@
 }
 
 @layer base {
-  body {
+  html, body {
     background-color: var(--color-white);
     color: var(--color-omk-text);
     font-family: sans-serif;
@@ -19,6 +19,8 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     width: 100%;
+    max-width: 100vw;
+    position: relative;
   }
 }
 

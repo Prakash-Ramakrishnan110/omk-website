@@ -64,12 +64,12 @@ const Home = () => {
           }}
         ></div>
 
-        {/* Glowing TN Map */}
-        <div className="absolute right-[-10%] md:right-10 top-1/2 -translate-y-1/2 w-[120%] md:w-[60%] lg:w-[50%] h-auto opacity-30 md:opacity-50 z-0 pointer-events-none flex justify-center items-center">
+        {/* Background Map */}
+        <div className="absolute inset-0 w-full h-full opacity-30 md:opacity-50 z-0 pointer-events-none flex justify-center items-center overflow-hidden">
           <img 
             src="/tn_map.png" 
             alt="Tamil Nadu Map" 
-            className="w-full h-full object-contain"
+            className="w-[120%] md:w-[60%] lg:w-[50%] h-auto object-contain transform translate-x-[10%] md:translate-x-0"
             style={{ filter: 'drop-shadow(0 0 40px rgba(252, 201, 23, 0.8)) drop-shadow(0 0 80px rgba(252, 201, 23, 0.4)) brightness(1.5) sepia(1) hue-rotate(10deg) saturate(3)' }}
           />
         </div>
@@ -103,7 +103,7 @@ const Home = () => {
             <img 
               src="/leader.png" 
               alt="Leader" 
-              className="w-auto h-[60vh] md:h-[75vh] object-contain relative bottom-0 right-0 md:-mr-10 z-20" 
+              className="w-auto max-w-[100%] h-[60vh] md:h-[75vh] object-contain relative bottom-0 right-0 md:-mr-10 z-20" 
               style={{ filter: 'drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5)) contrast(1.15) brightness(1.05)' }}
             />
           </div>
