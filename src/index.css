@@ -24,23 +24,42 @@
   }
 }
 
-.id-card-zoom {
-  zoom: 0.85;
+:root {
+  --card-scale: 0.85;
 }
 @media (max-width: 768px) {
-  .id-card-zoom {
-    zoom: 0.6;
+  :root {
+    --card-scale: 0.6;
   }
 }
 @media (max-width: 500px) {
-  .id-card-zoom {
-    zoom: 0.38;
+  :root {
+    --card-scale: 0.38;
   }
 }
 @media (max-width: 380px) {
-  .id-card-zoom {
-    zoom: 0.34;
+  :root {
+    --card-scale: 0.34;
   }
+}
+
+.id-card-wrapper {
+  width: calc(800px * var(--card-scale));
+  height: calc(455px * var(--card-scale));
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.id-card-content {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(var(--card-scale));
+  transform-origin: top left;
+  flex-shrink: 0;
 }
 
 .shadow-custom {
