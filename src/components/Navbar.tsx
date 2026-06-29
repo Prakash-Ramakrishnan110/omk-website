@@ -89,7 +89,22 @@ const Navbar = () => {
           <Link to="/" className="py-3 border-b border-white/10" onClick={() => setIsOpen(false)}>Home</Link>
           <a href="#" className="py-3 border-b border-white/10">About</a>
           <a href="#" className="py-3 border-b border-white/10">Vision</a>
-          <Link to="/register" className="py-3 text-white" onClick={() => setIsOpen(false)}>👥 Join Now</Link>
+          <Link to="/register" className="py-3 text-white border-b border-white/10" onClick={() => setIsOpen(false)}>👥 Join Now</Link>
+          
+          <div className="py-4 flex gap-2">
+            <button 
+              onClick={() => { setLanguage('EN'); setIsOpen(false); }}
+              className={`flex-1 rounded-lg py-2 font-black text-sm transition-colors border ${language === 'EN' ? 'bg-white text-primary border-white' : 'bg-transparent text-white border-white/30'}`}
+            >
+              English
+            </button>
+            <button 
+              onClick={() => { setLanguage('TA'); setIsOpen(false); }}
+              className={`flex-1 rounded-lg py-2 font-black text-sm transition-colors tamil border ${language === 'TA' ? 'bg-white text-primary border-white' : 'bg-transparent text-white border-white/30'}`}
+            >
+              தமிழ்
+            </button>
+          </div>
         </div>
       )}
     </header>
