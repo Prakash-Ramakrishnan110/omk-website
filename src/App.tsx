@@ -23,6 +23,7 @@ import AdminAuditLogs from './pages/admin/AuditLogs';
 // Components
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminLayout from './components/admin/AdminLayout';
+import ScrollToTop from './components/ScrollToTop';
 
 const PublicLayout = () => (
   <div className="flex flex-col min-h-screen bg-gray-50">
@@ -38,6 +39,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           {/* Public Routes with Navbar & Footer */}
           <Route element={<PublicLayout />}>

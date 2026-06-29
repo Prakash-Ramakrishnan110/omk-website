@@ -37,13 +37,13 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-gradient-to-b from-primary to-primary-dark text-white shadow-[0_4px_18px_rgba(0,0,0,0.14)]">
       <div className="container mx-auto w-[min(1480px,96%)] h-[66px] flex items-center gap-[18px]">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-3 min-w-[310px] shrink-0">
-          <div className="w-[46px] h-[46px] shrink-0 rounded-full bg-white border-[3px] border-white/45 flex items-center justify-center shadow-[inset_0_0_0_2px_#b40000] overflow-hidden">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-1 min-w-0">
+          <div className="w-[36px] h-[36px] md:w-[46px] md:h-[46px] shrink-0 rounded-full bg-white border-[2px] md:border-[3px] border-white/45 flex items-center justify-center shadow-[inset_0_0_0_2px_#b40000] overflow-hidden">
             <img src="/omk-logo.webp" alt="OMK logo" className="w-full h-full object-cover" />
           </div>
-          <span className="flex flex-col leading-[1.02]">
-            <strong className="text-[19px] font-black tracking-[-0.2px]">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
-            <small className="font-black tracking-[2.5px] opacity-98 text-center mt-1 text-[11px] w-full block">— OMK —</small>
+          <span className="flex flex-col leading-[1.02] truncate">
+            <strong className="text-[14px] md:text-[19px] font-black tracking-[-0.2px] truncate">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
+            <small className="font-black tracking-[1px] md:tracking-[2.5px] opacity-98 text-center mt-1 text-[9px] md:text-[11px] w-full block">— OMK —</small>
           </span>
         </Link>
 
@@ -57,18 +57,20 @@ const Navbar = () => {
         </nav>
 
         {/* Language Switch */}
-        <div className="hidden md:flex gap-1.5 bg-white/10 border border-white/30 rounded-full p-1 shrink-0 ml-auto lg:ml-0">
+        <div className="flex gap-1 bg-white/10 border border-white/30 rounded-full p-1 shrink-0 ml-auto lg:ml-0">
           <button 
             onClick={() => setLanguage('EN')}
-            className={`rounded-full py-1.5 px-3 font-black text-sm transition-colors ${language === 'EN' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
+            className={`rounded-full py-1 px-2 md:py-1.5 md:px-3 font-black text-xs md:text-sm transition-colors ${language === 'EN' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
           >
-            English
+            <span className="md:hidden">EN</span>
+            <span className="hidden md:inline">English</span>
           </button>
           <button 
             onClick={() => setLanguage('TA')}
-            className={`rounded-full py-1.5 px-3 font-black text-sm transition-colors tamil ${language === 'TA' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
+            className={`rounded-full py-1 px-2 md:py-1.5 md:px-3 font-black text-xs md:text-sm transition-colors tamil ${language === 'TA' ? 'bg-white text-primary' : 'bg-transparent text-white'}`}
           >
-            தமிழ்
+            <span className="md:hidden">TA</span>
+            <span className="hidden md:inline">தமிழ்</span>
           </button>
         </div>
 
@@ -78,7 +80,7 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile Toggle */}
-        <button className="lg:hidden ml-auto p-2" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden p-2 shrink-0 ml-2" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -89,22 +91,7 @@ const Navbar = () => {
           <Link to="/" className="py-3 border-b border-white/10" onClick={() => setIsOpen(false)}>Home</Link>
           <a href="#" className="py-3 border-b border-white/10">About</a>
           <a href="#" className="py-3 border-b border-white/10">Vision</a>
-          <Link to="/register" className="py-3 text-white border-b border-white/10" onClick={() => setIsOpen(false)}>👥 Join Now</Link>
-          
-          <div className="py-4 flex gap-2">
-            <button 
-              onClick={() => { setLanguage('EN'); setIsOpen(false); }}
-              className={`flex-1 rounded-lg py-2 font-black text-sm transition-colors border ${language === 'EN' ? 'bg-white text-primary border-white' : 'bg-transparent text-white border-white/30'}`}
-            >
-              English
-            </button>
-            <button 
-              onClick={() => { setLanguage('TA'); setIsOpen(false); }}
-              className={`flex-1 rounded-lg py-2 font-black text-sm transition-colors tamil border ${language === 'TA' ? 'bg-white text-primary border-white' : 'bg-transparent text-white border-white/30'}`}
-            >
-              தமிழ்
-            </button>
-          </div>
+          <Link to="/register" className="py-3 text-white" onClick={() => setIsOpen(false)}>👥 Join Now</Link>
         </div>
       )}
     </header>
