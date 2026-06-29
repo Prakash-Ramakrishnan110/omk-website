@@ -65,11 +65,11 @@ const Home = () => {
         ></div>
 
         {/* Background Map */}
-        <div className="absolute inset-0 w-full h-full opacity-30 md:opacity-50 z-0 pointer-events-none flex justify-center items-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full opacity-30 md:opacity-50 z-0 pointer-events-none overflow-hidden">
           <img 
             src="/tn_map.png" 
             alt="Tamil Nadu Map" 
-            className="w-[120%] md:w-[60%] lg:w-[50%] h-auto object-contain transform translate-x-[10%] md:translate-x-0"
+            className="absolute top-1/2 -translate-y-1/2 right-[-10%] md:right-10 w-[120%] md:w-[60%] lg:w-[50%] h-auto object-contain"
             style={{ filter: 'drop-shadow(0 0 40px rgba(252, 201, 23, 0.8)) drop-shadow(0 0 80px rgba(252, 201, 23, 0.4)) brightness(1.5) sepia(1) hue-rotate(10deg) saturate(3)' }}
           />
         </div>
