@@ -83,16 +83,16 @@ const Home = () => {
                <img src="/omk-logo.webp" alt="OMK Logo" className="w-full h-auto object-contain rounded-xl" style={{ display: 'block', maxWidth: '100%' }} />
             </div>
 
-            <h1 className="text-[48px] md:text-[64px] lg:text-[76px] leading-[1.1] font-black text-white mb-4 drop-shadow-lg">
-              <span className={`block mb-2 text-[36px] md:text-[48px] text-[#fcc917] ${language === 'EN' ? 'tamil' : ''}`}>
+            <h1 className="text-[32px] sm:text-[48px] md:text-[64px] lg:text-[76px] leading-[1.1] font-black text-white mb-4 drop-shadow-lg">
+              <span className={`block mb-2 text-[24px] sm:text-[36px] md:text-[48px] text-[#fcc917] ${language === 'EN' ? 'tamil' : ''}`}>
                 {t.heroSub}
               </span>
               <span className={language === 'TA' ? 'tamil' : ''}>{t.heroMain}</span>
             </h1>
             
-            <p className="text-[20px] md:text-[24px] mb-10 text-white/90 max-w-[600px] leading-relaxed font-medium">
+            <p className="text-[16px] sm:text-[20px] md:text-[24px] mb-8 md:mb-10 text-white/90 max-w-[600px] leading-relaxed font-medium">
               <span className={language === 'TA' ? 'tamil' : ''}>{t.heroDesc}</span>
-              <span className={`block mt-4 text-[#fcc917] font-bold text-[28px] ${language === 'EN' ? 'tamil' : ''}`}>
+              <span className={`block mt-3 md:mt-4 text-[#fcc917] font-bold text-[20px] sm:text-[28px] ${language === 'EN' ? 'tamil' : ''}`}>
                 {t.heroDescSub}
               </span>
             </p>

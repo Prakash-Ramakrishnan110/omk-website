@@ -77,7 +77,7 @@ const VerifyMember = () => {
         
         <div className="p-8 flex flex-col items-center text-center">
           {settings ? (
-            <div className="w-full flex justify-center bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-gray-50 py-8 rounded-xl border border-gray-200 overflow-x-auto mb-8">
+            <div className="w-full flex justify-start md:justify-center bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-gray-50 py-8 px-4 rounded-xl border border-gray-200 overflow-x-auto mb-8">
                <IDCardTemplate member={member} settings={settings} />
             </div>
           ) : (
