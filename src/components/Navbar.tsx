@@ -37,12 +37,12 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-gradient-to-b from-primary to-primary-dark text-white shadow-[0_4px_18px_rgba(0,0,0,0.14)]">
       <div className="container mx-auto w-[min(1480px,96%)] h-[66px] flex items-center gap-[18px]">
         {/* Brand */}
-        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-1 min-w-0">
+        <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0">
           <div className="w-[36px] h-[36px] md:w-[46px] md:h-[46px] shrink-0 rounded-full bg-white border-[2px] md:border-[3px] border-white/45 flex items-center justify-center shadow-[inset_0_0_0_2px_#b40000] overflow-hidden">
             <img src="/omk-logo.webp" alt="OMK logo" className="w-full h-full object-cover" />
           </div>
-          <span className="flex flex-col leading-[1.02] truncate">
-            <strong className="text-[14px] md:text-[19px] font-black tracking-[-0.2px] truncate">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
+          <span className="flex flex-col leading-[1.02]">
+            <strong className="text-[14px] md:text-[19px] font-black tracking-[-0.2px] whitespace-nowrap">ஒற்றுமை முன்னேற்றக் கழகம்</strong>
             <small className="font-black tracking-[1px] md:tracking-[2.5px] opacity-98 text-center mt-1 text-[9px] md:text-[11px] w-full block">— OMK —</small>
           </span>
         </Link>
